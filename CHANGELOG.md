@@ -49,11 +49,19 @@
 
 ## [Unreleased]
 
-### v1.1.0 - Security Enhancement
-- [x] Secret-Shield module for sensitive data protection
+### v1.2.0 - Optimization Engine
+- [x] Genetic Algorithm module for complex optimization
+- [x] 5 built-in problems (Knapsack, TSP, Scheduling, etc.)
+- [x] Multiple encoding schemes (binary, real, permutation)
+- [x] Configurable selection, crossover, mutation operators
 - [ ] Module marketplace integration
 - [ ] Community module registry
-- [ ] Dependency management
+
+### v1.1.0 - Security Enhancement
+- [x] Secret-Shield module for sensitive data protection
+- [x] 18+ sensitive data patterns
+- [x] Real-time output scanning
+- [x] Automatic blocking and redaction
 
 ---
 
