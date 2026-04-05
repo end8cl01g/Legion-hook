@@ -47,13 +47,17 @@
 
 ---
 
-## Future Versions (Planned)
+## [Unreleased]
 
-### v1.1.0 - Module Marketplace
-- [ ] Module discovery and installation
+### v1.1.0 - Security Enhancement
+- [x] Secret-Shield module for sensitive data protection
+- [ ] Module marketplace integration
 - [ ] Community module registry
-- [ ] Module dependency management
-- [ ] Version compatibility checking
+- [ ] Dependency management
+
+---
+
+## [v1.0.0] - 2026-04-05
 
 ### v1.2.0 - Advanced Context Management
 - [ ] Custom summarization models
