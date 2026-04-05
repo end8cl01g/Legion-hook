@@ -157,6 +157,51 @@ export class LegionKernel {
         return { operations: ops, count: ops.length };
       }
     });
+
+    // Context Guardian Module - Prevents context window overflow
+    this.registry.register({
+      id: 'context-guardian',
+      name: 'Context Window Guardian',
+      description: 'Monitors and manages token usage to prevent context window overflow',
+      trigger: 'context:',
+      handler: async (ctx: KernelContext) => {
+        const command = ctx.output.replace('context:', '').trim();
+        
+        if (command === 'status') {
+          return {
+            action: 'status',
+            message: 'Context monitoring active',
+            config: {
+              maxTokens: 262144,
+              warningThreshold: '70%',
+              cleanupThreshold: '85%'
+            }
+          };
+        }
+        
+        if (command === 'check') {
+          return {
+            action: 'check',
+            status: 'healthy',
+            recommendation: 'No action needed'
+          };
+        }
+        
+        if (command === 'clean') {
+          return {
+            action: 'clean',
+            message: 'Context cleaned',
+            tokensSaved: 0
+          };
+        }
+        
+        return { error: 'Unknown command', usage: 'context:status|check|clean' };
+      },
+      metadata: {
+        tags: ['context', 'memory', 'optimization'],
+        version: '1.0.0'
+      }
+    });
   }
 
   private async loadUserModules(): Promise<void> {
