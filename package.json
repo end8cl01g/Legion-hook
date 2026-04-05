@@ -1,0 +1,41 @@
+{
+  "name": "legion-hook",
+  "version": "1.0.0",
+  "description": "Reverse execution kernel for OpenClaw - Modular hook system with context management",
+  "main": "handler.ts",
+  "types": "types.ts",
+  "scripts": {
+    "test": "echo \"No tests yet\"",
+    "build": "tsc",
+    "lint": "eslint . --ext .ts"
+  },
+  "keywords": [
+    "openclaw",
+    "hook",
+    "kernel",
+    "reverse-execution",
+    "context-management",
+    "llm",
+    "automation"
+  ],
+  "author": "end8cl01g",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/end8cl01g/Legion-hook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/end8cl01g/Legion-hook/issues"
+  },
+  "homepage": "https://github.com/end8cl01g/Legion-hook#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "openclaw": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
